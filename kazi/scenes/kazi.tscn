@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dd8bkqqcql4fq"]
+
+[ext_resource type="Script" uid="uid://dcwjq3o6dyiti" path="res://scripts/kazi.gd" id="1_65x68"]
+[ext_resource type="Texture2D" uid="uid://cq6rvhngnljoc" path="res://assets/sprites/ChatGPT Image Aug 30, 2026, 03_45_59 PM.png" id="1_d26m7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18fwx"]
+atlas = ExtResource("1_d26m7")
+region = Rect2(306, 0, 153, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abaq6"]
+atlas = ExtResource("1_d26m7")
+region = Rect2(459, 0, 153, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2vhh"]
+atlas = ExtResource("1_d26m7")
+region = Rect2(612, 0, 153, 204)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xepy2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18fwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abaq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2vhh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qc24j"]
+radius = 14.999998
+height = 55.0
+
+[node name="Kazi" type="CharacterBody2D" unique_id=1255641211]
+z_index = 4
+scale = Vector2(0.4, 0.4)
+collision_layer = 2
+script = ExtResource("1_65x68")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1622128294]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_xepy2")
+autoplay = "default"
+frame = 1
+frame_progress = 0.7555289
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1449707871]
+position = Vector2(-9.999999, 14.999999)
+shape = SubResource("CapsuleShape2D_qc24j")

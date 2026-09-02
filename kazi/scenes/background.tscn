@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://epf07figran4"]
+
+[ext_resource type="Texture2D" uid="uid://c8v01srl34g78" path="res://assets/sprites/terai.png" id="1_bkp1e"]
+[ext_resource type="Shader" uid="uid://cavbpqrcwg0ae" path="res://scenes/background.gdshader" id="1_y0upk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lbhrr"]
+shader = ExtResource("1_y0upk")
+
+[node name="background" type="Node2D" unique_id=1954222983]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=488748909]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_lbhrr")
+offset_left = 13.0
+offset_top = 14.0
+offset_right = 6593.0
+offset_bottom = 199.0
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("1_bkp1e")
+expand_mode = 1
+stretch_mode = 1
